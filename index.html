@@ -24,13 +24,15 @@ a{color:#14212e;text-decoration:none}a:hover{color:#1d6b66}
 .ctrack:focus-visible{outline:2px solid #1d6b66;outline-offset:4px}
 .ctrack li{flex:0 0 200px;scroll-snap-align:start;position:relative}
 .ctrack li+li:before{content:"";position:absolute;right:100%;top:50%;width:40px;border-top:1.5px dashed #1d6b66}
-.cert{position:relative;display:flex;align-items:center;justify-content:center;text-align:center;width:200px;height:200px;box-sizing:border-box;padding:24px;border:1.5px solid #14212e;background:#f6f3ec;color:#14212e;text-decoration:none;transition:background .2s,color .2s,transform .2s}
-.cert .nm{font-family:'Iowan Old Style',Georgia,serif;font-size:21px;line-height:1.25}
-.cert .pins{position:absolute;inset:-8px 24px;background:linear-gradient(#14212e,#14212e) 0 0/2px 7px repeat-x, linear-gradient(#14212e,#14212e) 0 100%/2px 7px repeat-x;background-image:repeating-linear-gradient(90deg,#14212e 0 2px,transparent 2px 26px),repeating-linear-gradient(90deg,#14212e 0 2px,transparent 2px 26px);background-size:100% 7px,100% 7px;background-position:0 0,0 100%;background-repeat:no-repeat;pointer-events:none}
-a.cert:after{content:"\2197";position:absolute;top:10px;right:12px;font-size:14px;color:#1d6b66}
-a.cert:hover{background:#14212e;color:#fff;transform:translateY(-3px)}
-a.cert:hover:after{color:#fff}
-a.cert:focus-visible{outline:2px solid #1d6b66;outline-offset:4px}
+.cert{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;width:200px;height:200px;box-sizing:border-box;padding:22px;border:1.5px solid #14212e;background:#f6f3ec;color:#14212e;transition:transform .2s,border-color .2s}
+.cert .nm{font-family:'Iowan Old Style',Georgia,serif;font-size:19px;line-height:1.25;color:#14212e;text-decoration:none}
+.cert a.nm{text-decoration:underline;text-decoration-color:#1d6b66;text-underline-offset:4px;text-decoration-thickness:1.5px}
+.cert a.nm:after{content:" \2197";font-size:14px;color:#1d6b66}
+.cert a.nm:hover{color:#1d6b66}
+.cert a.nm:focus-visible{outline:2px solid #1d6b66;outline-offset:4px}
+.cert:has(a.nm:hover){border-color:#1d6b66;transform:translateY(-3px)}
+.cert .iss{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5f6b77}
+.cert .pins{position:absolute;inset:-8px 24px;background-image:repeating-linear-gradient(90deg,#14212e 0 2px,transparent 2px 26px),repeating-linear-gradient(90deg,#14212e 0 2px,transparent 2px 26px);background-size:100% 7px,100% 7px;background-position:0 0,0 100%;background-repeat:no-repeat;pointer-events:none}
 .cbtn{width:44px;height:44px;border-radius:50%;border:1px solid #14212e;background:transparent;color:#14212e;cursor:pointer;display:grid;place-items:center}
 .cbtn:hover{background:#14212e;color:#fff}
 .cbtn:disabled{opacity:.3;cursor:default;background:transparent;color:#14212e}
@@ -103,29 +105,20 @@ a.cert:focus-visible{outline:2px solid #1d6b66;outline-offset:4px}
       </div>
     </div>
     <ul class="ctrack" tabindex="0" aria-label="Certifications, scroll sideways">
-        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
-        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">AI Fluency: Framework &amp; Foundations</span></div></li>
-        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
-        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">AI Capabilities and Limitations</span></div></li>
-        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
-        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">Claude 101</span></div></li>
-        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
-        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">IBM Data Science Professional Certificate</span></div></li>
-        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
-        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">Python for Data Science</span></div></li>
-        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
-        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">Data Science Foundations Level 2</span></div></li>
-        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
-        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">Big Data Foundations Level 2</span></div></li>
-        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
-        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">HubSpot Content Marketing</span></div></li>
-        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
-        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">HubSpot SEO</span></div></li>
-        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
-        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">HubSpot Inbound Marketing</span></div></li>
-        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
-        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">HubSpot Growth-Driven Design</span></div></li>
-        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
+        <!-- To add a link: change <span class="nm"> to <a class="nm" href="URL" target="_blank" rel="noopener"> -->
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><a class="nm" href="https://verify.skilljar.com/c/uw8c3b457dku" target="_blank" rel="noopener">AI Fluency: Framework &amp; Foundations</a><span class="iss">Anthropic</span></div></li>
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><a class="nm" href="https://verify.skilljar.com/c/hwvxgnaobhxe" target="_blank" rel="noopener">AI Capabilities and Limitations</a><span class="iss">Anthropic</span></div></li>
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><a class="nm" href="https://verify.skilljar.com/c/pjpy3ar7w2ry" target="_blank" rel="noopener">Claude 101</a><span class="iss">Anthropic</span></div></li>
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><a class="nm" href="https://www.coursera.org/account/accomplishments/specialization/certificate/VQ8E3ZZ5UJFA" target="_blank" rel="noopener">Data Science Professional Certificate</a><span class="iss">IBM</span></div></li>
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><a class="nm" href="https://www.coursera.org/account/accomplishments/verify/3HY4QTAL8BLP" target="_blank" rel="noopener">Python for Data Science and AI</a><span class="iss">Coursera</span></div></li>
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><a class="nm" href="https://www.coursera.org/account/accomplishments/verify/HE9JGHEZAE8F" target="_blank" rel="noopener">Data Science Methodology</a><span class="iss">Coursera</span></div></li>
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><a class="nm" href="https://www.credly.com/badges/99ef19fb-2d4d-46e6-b31b-c45cb350f41a/linked_in_profile" target="_blank" rel="noopener">Python for Data Science</a><span class="iss">IBM</span></div></li>
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">Data Science Foundations Level 2</span><span class="iss">IBM</span></div></li>
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">Big Data Foundations Level 2</span><span class="iss">IBM</span></div></li>
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">Content Marketing</span><span class="iss">HubSpot Academy</span></div></li>
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">SEO</span><span class="iss">HubSpot Academy</span></div></li>
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">Inbound Marketing</span><span class="iss">HubSpot Academy</span></div></li>
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">Growth-Driven Design</span><span class="iss">HubSpot Academy</span></div></li>
         <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">User Experience for the Web</span></div></li>
     </ul>
   </div>
