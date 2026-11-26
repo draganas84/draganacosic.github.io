@@ -19,13 +19,18 @@ a{color:#14212e;text-decoration:none}a:hover{color:#1d6b66}
 .sch text.m{fill:#5f6b77;font-weight:500;letter-spacing:.06em}
 .sch text.k{fill:#14212e;font-family:"Iowan Old Style",Georgia,serif;font-style:italic;font-weight:400;letter-spacing:0;font-size:17px}
 
-.ctrack{list-style:none;margin:0;padding:4px 0 12px;display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;border-top:1px solid #d9d4c7;border-bottom:1px solid #d9d4c7}
+.ctrack{list-style:none;margin:0;padding:20px 4px 24px;display:flex;gap:40px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;position:relative}
 .ctrack::-webkit-scrollbar{display:none}
 .ctrack:focus-visible{outline:2px solid #1d6b66;outline-offset:4px}
-.cert{flex:0 0 180px;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;padding:24px 14px 16px;position:relative}
-.cert+.cert:before{content:"";position:absolute;left:0;top:44px;width:100%;height:0;border-top:1px dashed #b9b3a4;z-index:0;transform:translateX(-50%)}
-.cert svg{position:relative;z-index:1;background:#fbf9f4;padding:6px;box-sizing:content-box}
-.cert p{margin:0;font-size:13px;line-height:1.4;color:#14212e}
+.ctrack li{flex:0 0 200px;scroll-snap-align:start;position:relative}
+.ctrack li+li:before{content:"";position:absolute;right:100%;top:50%;width:40px;border-top:1.5px dashed #1d6b66}
+.cert{position:relative;display:flex;align-items:center;justify-content:center;text-align:center;width:200px;height:200px;box-sizing:border-box;padding:24px;border:1.5px solid #14212e;background:#f6f3ec;color:#14212e;text-decoration:none;transition:background .2s,color .2s,transform .2s}
+.cert .nm{font-family:'Iowan Old Style',Georgia,serif;font-size:21px;line-height:1.25}
+.cert .pins{position:absolute;inset:-8px 24px;background:linear-gradient(#14212e,#14212e) 0 0/2px 7px repeat-x, linear-gradient(#14212e,#14212e) 0 100%/2px 7px repeat-x;background-image:repeating-linear-gradient(90deg,#14212e 0 2px,transparent 2px 26px),repeating-linear-gradient(90deg,#14212e 0 2px,transparent 2px 26px);background-size:100% 7px,100% 7px;background-position:0 0,0 100%;background-repeat:no-repeat;pointer-events:none}
+a.cert:after{content:"\2197";position:absolute;top:10px;right:12px;font-size:14px;color:#1d6b66}
+a.cert:hover{background:#14212e;color:#fff;transform:translateY(-3px)}
+a.cert:hover:after{color:#fff}
+a.cert:focus-visible{outline:2px solid #1d6b66;outline-offset:4px}
 .cbtn{width:44px;height:44px;border-radius:50%;border:1px solid #14212e;background:transparent;color:#14212e;cursor:pointer;display:grid;place-items:center}
 .cbtn:hover{background:#14212e;color:#fff}
 .cbtn:disabled{opacity:.3;cursor:default;background:transparent;color:#14212e}
@@ -98,19 +103,30 @@ a{color:#14212e;text-decoration:none}a:hover{color:#1d6b66}
       </div>
     </div>
     <ul class="ctrack" tabindex="0" aria-label="Certifications, scroll sideways">
-        <li class="cert"><svg class="sch" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><circle class="s" cx="24" cy="24" r="6"/><circle class="fa" cx="9" cy="12" r="3"/><circle class="fa" cx="39" cy="12" r="3"/><circle class="fa" cx="9" cy="36" r="3"/><circle class="fa" cx="39" cy="36" r="3"/><path class="a" d="M11.5 13.5 L19 20 M36.5 13.5 L29 20 M11.5 34.5 L19 28 M36.5 34.5 L29 28"/></svg><p>AI Fluency: Framework &amp; Foundations</p></li>
-        <li class="cert"><svg class="sch" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><circle class="s" cx="24" cy="24" r="6"/><circle class="fa" cx="9" cy="12" r="3"/><circle class="fa" cx="39" cy="12" r="3"/><circle class="fa" cx="9" cy="36" r="3"/><circle class="fa" cx="39" cy="36" r="3"/><path class="a" d="M11.5 13.5 L19 20 M36.5 13.5 L29 20 M11.5 34.5 L19 28 M36.5 34.5 L29 28"/></svg><p>AI Capabilities and Limitations</p></li>
-        <li class="cert"><svg class="sch" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><circle class="s" cx="24" cy="24" r="6"/><circle class="fa" cx="9" cy="12" r="3"/><circle class="fa" cx="39" cy="12" r="3"/><circle class="fa" cx="9" cy="36" r="3"/><circle class="fa" cx="39" cy="36" r="3"/><path class="a" d="M11.5 13.5 L19 20 M36.5 13.5 L29 20 M11.5 34.5 L19 28 M36.5 34.5 L29 28"/></svg><p>Claude 101</p></li>
-        <li class="cert"><svg class="sch" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><path class="s" d="M8 8 V40 H42"/><circle class="fa" cx="15" cy="32" r="2.4"/><circle class="fa" cx="21" cy="26" r="2.4"/><circle class="fa" cx="28" cy="28" r="2.4"/><circle class="fa" cx="33" cy="18" r="2.4"/><circle class="fa" cx="39" cy="13" r="2.4"/><path class="d" d="M12 36 L40 11"/></svg><p>IBM Data Science Professional Certificate</p></li>
-        <li class="cert"><svg class="sch" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><rect class="s" x="6" y="9" width="36" height="30" rx="2"/><path class="s" d="M6 16 H42"/><path class="a" d="M14 24 L19 28 L14 32 M23 32 H31"/></svg><p>Python for Data Science</p></li>
-        <li class="cert"><svg class="sch" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><path class="s" d="M8 8 V40 H42"/><circle class="fa" cx="15" cy="32" r="2.4"/><circle class="fa" cx="21" cy="26" r="2.4"/><circle class="fa" cx="28" cy="28" r="2.4"/><circle class="fa" cx="33" cy="18" r="2.4"/><circle class="fa" cx="39" cy="13" r="2.4"/><path class="d" d="M12 36 L40 11"/></svg><p>Data Science Foundations Level 2</p></li>
-        <li class="cert"><svg class="sch" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><ellipse class="s" cx="24" cy="11" rx="14" ry="5"/><path class="s" d="M10 11 V37 C10 40 16 42 24 42 S38 40 38 37 V11 M10 24 C10 27 16 29 24 29 S38 27 38 24"/><circle class="fa" cx="31" cy="34" r="2"/></svg><p>Big Data Foundations Level 2</p></li>
-        <li class="cert"><svg class="sch" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><path class="s" d="M12 6 H30 L38 14 V42 H12 Z M30 6 V14 H38"/><path class="a" d="M18 22 H32 M18 29 H32 M18 36 H26"/></svg><p>HubSpot Content Marketing</p></li>
-        <li class="cert"><svg class="sch" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><circle class="s" cx="21" cy="21" r="12"/><path class="s" d="M30 30 L41 41"/><path class="a" d="M15 25 L20 19 L24 23 L28 16"/></svg><p>HubSpot SEO</p></li>
-        <li class="cert"><svg class="sch" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><path class="s" d="M6 10 H42 L28 26 V40 L20 36 V26 Z"/><circle class="fa" cx="16" cy="16" r="2"/><circle class="fa" cx="26" cy="15" r="2"/><circle class="fa" cx="33" cy="17" r="2"/></svg><p>HubSpot Inbound Marketing</p></li>
-        <li class="cert"><svg class="sch" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><path class="s" d="M8 8 V40 H42"/><path class="a" d="M12 34 L20 26 L27 30 L38 15 M32 15 H38 V21"/></svg><p>HubSpot Growth-Driven Design</p></li>
-        <li class="cert"><svg class="sch" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><rect class="s" x="5" y="8" width="38" height="28" rx="2"/><path class="s" d="M5 14 H43"/><path class="a" d="M24 22 L24 38 L28 34 L31 41 L34 39.5 L31 33 L36 33 Z"/></svg><p>User Experience for the Web</p></li>
-        <li class="cert"><svg class="sch" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><path class="s" d="M6 10 H30 V26 H16 L10 31 V26 H6 Z"/><path class="a" d="M34 18 H42 V34 H38 V39 L33 34 H20 V30"/></svg><p>Introduction to Communication Science</p></li>
+        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">AI Fluency: Framework &amp; Foundations</span></div></li>
+        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">AI Capabilities and Limitations</span></div></li>
+        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">Claude 101</span></div></li>
+        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">IBM Data Science Professional Certificate</span></div></li>
+        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">Python for Data Science</span></div></li>
+        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">Data Science Foundations Level 2</span></div></li>
+        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">Big Data Foundations Level 2</span></div></li>
+        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">HubSpot Content Marketing</span></div></li>
+        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">HubSpot SEO</span></div></li>
+        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">HubSpot Inbound Marketing</span></div></li>
+        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">HubSpot Growth-Driven Design</span></div></li>
+        <!-- Add credential URL: change the div to <a class="cert" href="URL" target="_blank" rel="noopener"> -->
+        <li><div class="cert"><span class="pins" aria-hidden="true"></span><span class="nm">User Experience for the Web</span></div></li>
     </ul>
   </div>
 </section>
@@ -264,7 +280,7 @@ a{color:#14212e;text-decoration:none}a:hover{color:#1d6b66}
 <script>
 (function(){var tr=document.querySelector('.ctrack');if(!tr)return;var bs=document.querySelectorAll('.cbtn');
 function upd(){bs[0].disabled=tr.scrollLeft<=2;bs[1].disabled=tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-2}
-bs.forEach(function(b){b.addEventListener('click',function(){tr.scrollBy({left:(+b.dataset.dir)*Math.max(180,tr.clientWidth-180),behavior:'smooth'})})});
+bs.forEach(function(b){b.addEventListener('click',function(){tr.scrollBy({left:(+b.dataset.dir)*Math.max(240,tr.clientWidth-240),behavior:'smooth'})})});
 tr.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();})();
 </script>
 </body>
