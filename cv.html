@@ -56,6 +56,7 @@ body.filtering .job li.hit:before{background:#1d6b66}
 body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-color:#1d6b66}
 .edu{padding-top:32px;border-top:1px solid #d9d4c7}
 .tk{padding-top:32px;border-top:1px solid #d9d4c7}.tk h2{margin:0 0 18px;font-family:'Iowan Old Style',Georgia,serif;font-weight:500;font-size:28px;line-height:1.2;color:#1d6b66}.tk dl{margin:0;display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:12px 24px}.tk dt{font-weight:600;font-size:15px;padding-top:3px}.tk dd{margin:0;display:flex;flex-wrap:wrap;gap:6px}.tk dd span{font-size:14px;border:1px solid #d9d4c7;background:#fbf9f4;border-radius:999px;padding:2px 12px}@media(max-width:600px){.tk dl{grid-template-columns:1fr;gap:6px}.tk dd{margin-bottom:10px}}
+.cvnav{display:flex;flex-direction:column;gap:8px;margin:0 0 26px;padding:0 0 14px;border-bottom:1px solid #d9d4c7;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}.cvnav a{color:#5f6b77}.cvnav a:hover{color:#1d6b66}.tk{scroll-margin-top:24px}#experience{scroll-margin-top:24px}.tk p.t{margin:0;font-size:16px}.tk p.s{margin:2px 0 0;color:#5f6b77;font-size:15px}.tk+.tk{margin-top:40px}
 </style>
 </head>
 <body>
@@ -75,7 +76,7 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
 </nav>
 <div class="xp">
   <aside class="side" aria-label="Filter by skill">
-    <p class="eyebrow">CV</p>
+    <nav class="cvnav" aria-label="CV sections"><a href="#experience">Professional Experience</a><a href="#education">Education</a><a href="#tools">Tools</a><a href="#languages">Languages</a></nav>
     <h1>16+ years, filtered by skill.</h1>
     <div class="rule"></div>
     <p class="hint">Pick the skills you're hiring for. Matching experience lights up.</p>
@@ -104,7 +105,7 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
     <div class="tools"><button type="button" class="clear" hidden>Clear all</button><span id="status" role="status" aria-live="polite"></span></div>
     <p style="margin:24px 0 0"><a href="files/Dragana-Cosic-CV.pdf" download style="display:inline-block;padding:12px 22px;border-radius:4px;font-weight:600;font-size:15px;background:#14212e;color:#fff">Download CV (PDF)</a></p>
   </aside>
-  <main class="main">
+  <main class="main" id="experience">
       <article class="job">
         <div class="jh">
           <h2><a href="https://www.epicgames.com" target="_blank" rel="noopener">Epic Games</a> / <a href="https://www.3lateral.com" target="_blank" rel="noopener">3Lateral</a></h2>
@@ -232,7 +233,9 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
           <li data-tags="content tech"><span class="txt">Wrote technical eBooks, tutorials, whitepapers, case studies, articles, and web and ad copy for clients including Graylog and Devart.</span> <span class="bt"><span data-k="content">Content marketing</span> <span data-k="tech">Technical depth</span></span></li>
         </ul>
       </article>
-      <section class="tk" aria-labelledby="tools-h"><h2 id="tools-h">Tools</h2><dl><dt>Analytics &amp; CRM</dt><dd><span>Google Analytics 4</span><span>Google Tag Manager</span><span>HubSpot</span><span>Meta Business Suite</span></dd><dt>SEO &amp; Content</dt><dd><span>Semrush</span><span>Yoast</span><span>WordPress</span><span>Kajabi</span><span>Grammarly</span></dd><dt>Project &amp; Collaboration</dt><dd><span>Jira</span><span>Confluence</span><span>Asana</span><span>Miro</span></dd><dt>Design &amp; Production</dt><dd><span>Figma</span><span>Canva</span></dd><dt>Technical, Data, &amp; AI</dt><dd><span>HTML/CSS</span><span>Python</span><span>Kaggle</span><span>Claude</span></dd><dt>Office &amp; Spreadsheets</dt><dd><span>Microsoft Office</span><span>Excel</span><span>Google Sheets</span></dd><dt>Marketing Ops</dt><dd><span>CRM workflows</span><span>Campaign tracking</span><span>Reporting dashboards</span></dd></dl></section>
+      <section class="tk" id="education" aria-labelledby="edu-h"><h2 id="edu-h">Education</h2><p class="t"><strong>Master&#x27;s degree in Electrical &amp; Computer Engineering</strong></p><p class="s">Major: Microcomputer Electronics<br>Faculty of Technical Sciences, Novi Sad</p><p class="s" style="margin-top:12px">Additional master&#x27;s studies in Data Science (coursework completed, no degree conferred)</p></section>
+      <section class="tk" id="tools" aria-labelledby="tools-h"><h2 id="tools-h">Tools</h2><dl><dt>Analytics &amp; CRM</dt><dd><span>Google Analytics 4</span><span>Google Tag Manager</span><span>HubSpot</span><span>Meta Business Suite</span></dd><dt>SEO &amp; Content</dt><dd><span>Semrush</span><span>Yoast</span><span>WordPress</span><span>Kajabi</span><span>Grammarly</span></dd><dt>Project &amp; Collaboration</dt><dd><span>Jira</span><span>Confluence</span><span>Asana</span><span>Miro</span></dd><dt>Design &amp; Production</dt><dd><span>Figma</span><span>Canva</span></dd><dt>Technical, Data, &amp; AI</dt><dd><span>HTML/CSS</span><span>Python</span><span>Kaggle</span><span>Claude</span></dd><dt>Office &amp; Spreadsheets</dt><dd><span>Microsoft Office</span><span>Excel</span><span>Google Sheets</span></dd><dt>Marketing Ops</dt><dd><span>CRM workflows</span><span>Campaign tracking</span><span>Reporting dashboards</span></dd></dl></section>
+      <section class="tk" id="languages" aria-labelledby="lang-h"><h2 id="lang-h">Languages</h2><dl><dt>English</dt><dd><span>Bilingual</span></dd><dt>German</dt><dd><span>B2</span></dd><dt>French</dt><dd><span>B1</span></dd><dt>Serbian</dt><dd><span>Native</span></dd></dl></section>
   </main>
 </div>
 <footer style="border-top: 1px solid #d9d4c7; padding: 30px 24px; font-size: 13px; color: #5f6b77">
