@@ -37,11 +37,11 @@ a{color:#14212e;text-decoration:none}a:hover{color:#1d6b66}
 .clear{background:none;border:0;padding:8px 0;font:inherit;font-size:14px;font-weight:600;color:#1d6b66;cursor:pointer;text-decoration:underline}
 .clear[hidden]{display:none}
 .job{padding:32px 0;border-top:1px solid #d9d4c7}
-.job:first-child{border-top:0;padding-top:0}
+.shd+.job{border-top:0;padding-top:0}
 .jh{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 16px}
-.job h2{color:#1d6b66;margin:0;font-family:'Iowan Old Style',Georgia,serif;font-weight:500;font-size:28px;line-height:1.2}
-.job h2 a{color:#1d6b66;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:5px;text-decoration-thickness:1.5px;transition:text-decoration-color .2s}
-.job h2 a:hover{color:#14212e;text-decoration-color:currentColor}
+.job h3{color:#1d6b66;margin:0;font-family:'Iowan Old Style',Georgia,serif;font-weight:500;font-size:22px;line-height:1.25}
+.job h3 a{color:#1d6b66;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:5px;text-decoration-thickness:1.5px;transition:text-decoration-color .2s}
+.job h3 a:hover{color:#14212e;text-decoration-color:currentColor}
 .dates{margin:0;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;color:#5f6b77}
 .role{margin:8px 0 14px;font-weight:600;font-size:16px}
 .desc{margin:4px 0 0;color:#5f6b77;font-size:14px}
@@ -55,7 +55,7 @@ body.filtering .job li.hit{opacity:1;background:#dcebe7}
 body.filtering .job li.hit:before{background:#1d6b66}
 body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-color:#1d6b66}
 .edu{padding-top:32px;border-top:1px solid #d9d4c7}
-.tk{padding-top:32px;border-top:1px solid #d9d4c7}.tk h2{margin:0 0 18px;font-family:'Iowan Old Style',Georgia,serif;font-weight:500;font-size:28px;line-height:1.2;color:#1d6b66}.tk dl{margin:0;display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:12px 24px}.tk dt{font-weight:600;font-size:15px;padding-top:3px}.tk dd{margin:0;display:flex;flex-wrap:wrap;gap:6px}.tk dd span{font-size:14px;border:1px solid #d9d4c7;background:#fbf9f4;border-radius:999px;padding:2px 12px}@media(max-width:600px){.tk dl{grid-template-columns:1fr;gap:6px}.tk dd{margin-bottom:10px}}
+.tk{padding-top:56px}.tk h2{margin:0 0 18px;font-family:'Iowan Old Style',Georgia,serif;font-weight:500;font-size:28px;line-height:1.2;color:#1d6b66}.tk dl{margin:0;display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:12px 24px}.tk dt{font-weight:600;font-size:15px;padding-top:3px}.tk dd{margin:0;display:flex;flex-wrap:wrap;gap:6px}.tk dd span{font-size:14px;border:1px solid #d9d4c7;background:#fbf9f4;border-radius:999px;padding:2px 12px}@media(max-width:600px){.tk dl{grid-template-columns:1fr;gap:6px}.tk dd{margin-bottom:10px}}
 .cvnav{display:flex;flex-direction:column;gap:8px;margin:0 0 26px;padding:0 0 14px;border-bottom:1px solid #d9d4c7;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}.cvnav a{color:#5f6b77}.cvnav a:hover{color:#1d6b66}.tk{scroll-margin-top:24px}#experience{scroll-margin-top:24px}.tk p.t{margin:0;font-size:16px}.tk p.s{margin:2px 0 0;color:#5f6b77;font-size:15px}.tk+.tk{margin-top:40px}
 .ctrack{list-style:none;margin:0;padding:20px 4px 24px;display:flex;gap:40px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;position:relative}
 .ctrack::-webkit-scrollbar{display:none}
@@ -74,6 +74,7 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
 .cbtn{width:44px;height:44px;border-radius:50%;border:1px solid #14212e;background:transparent;color:#14212e;cursor:pointer;display:grid;place-items:center}
 .cbtn:hover{background:#14212e;color:#fff}
 .cbtn:disabled{opacity:.3;cursor:default;background:transparent;color:#14212e}
+.main .shd{box-sizing:border-box;width:100%;border:2px solid #14212e;padding:12px 20px;margin:0 0 28px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Iowan Old Style',Georgia,serif;font-weight:500;font-size:26px;line-height:1.2;color:#14212e;background:#fbf9f4}.main .shd h2{margin:0;font:inherit;color:inherit}
 </style>
 </head>
 <body>
@@ -154,9 +155,10 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
     <p style="margin:24px 0 0"><a href="files/Dragana-Cosic-CV.pdf" download style="display:inline-block;padding:12px 22px;border-radius:4px;font-weight:600;font-size:15px;background:#14212e;color:#fff">Download CV (PDF)</a></p>
   </aside>
   <main class="main" id="experience">
+      <h2 class="shd" id="exp-h">Professional Experience</h2>
       <article class="job">
         <div class="jh">
-          <h2><a href="https://www.epicgames.com" target="_blank" rel="noopener">Epic Games</a> / <a href="https://www.3lateral.com" target="_blank" rel="noopener">3Lateral</a></h2>
+          <h3><a href="https://www.epicgames.com" target="_blank" rel="noopener">Epic Games</a> / <a href="https://www.3lateral.com" target="_blank" rel="noopener">3Lateral</a></h3>
           <p class="dates">Oct 2024 – Oct 2025</p>
         </div>
         <p class="desc">MetaHuman, digital human technology</p>
@@ -176,7 +178,7 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
       </article>
       <article class="job">
         <div class="jh">
-          <h2><a href="https://www.novelic.com" target="_blank" rel="noopener">NOVELIC</a></h2>
+          <h3><a href="https://www.novelic.com" target="_blank" rel="noopener">NOVELIC</a></h3>
           <p class="dates">Dec 2021 – Oct 2024</p>
         </div>
         <p class="desc">mmWave radar sensors and embedded engineering services (acquired by Sona Comstar)</p>
@@ -202,7 +204,7 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
       </article>
       <article class="job">
         <div class="jh">
-          <h2><a href="https://startinfinity.com" target="_blank" rel="noopener">Infinity</a></h2>
+          <h3><a href="https://startinfinity.com" target="_blank" rel="noopener">Infinity</a></h3>
           <p class="dates">Oct 2020 – Dec 2021</p>
         </div>
         <p class="desc">B2B SaaS work-management platform</p>
@@ -221,7 +223,7 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
       </article>
       <article class="job">
         <div class="jh">
-          <h2><a href="https://symphony.is" target="_blank" rel="noopener">Symphony</a></h2>
+          <h3><a href="https://symphony.is" target="_blank" rel="noopener">Symphony</a></h3>
           <p class="dates">Apr 2018 – Sep 2020</p>
         </div>
         <p class="desc">Software engineering services; business development team serving Big Tech, enterprise clients, and Bay Area startups</p>
@@ -235,7 +237,7 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
       </article>
       <article class="job">
         <div class="jh">
-          <h2><a href="https://www.wings4u.com/" target="_blank" rel="noopener">Wings4U</a></h2>
+          <h3><a href="https://www.wings4u.com/" target="_blank" rel="noopener">Wings4U</a></h3>
           <p class="dates">Mar 2017 – Apr 2018</p>
         </div>
         <p class="desc">International B2B content marketing agency</p>
@@ -248,7 +250,7 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
       </article>
       <article class="job">
         <div class="jh">
-          <h2><a href="https://noboundsdigital.com/" target="_blank" rel="noopener">No Bounds Digital</a></h2>
+          <h3><a href="https://noboundsdigital.com/" target="_blank" rel="noopener">No Bounds Digital</a></h3>
           <p class="dates">Jan 2016 – Mar 2017</p>
         </div>
         <p class="desc">US inbound marketing agency</p>
@@ -259,7 +261,7 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
       </article>
       <article class="job">
         <div class="jh">
-          <h2><a href="https://www.firstbeatmedia.com/" target="_blank" rel="noopener">First Beat Media</a></h2>
+          <h3><a href="https://www.firstbeatmedia.com/" target="_blank" rel="noopener">First Beat Media</a></h3>
           <p class="dates">Sep 2013 – Mar 2017</p>
         </div>
         <p class="desc">Paid media agency</p>
@@ -272,7 +274,7 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
       </article>
       <article class="job">
         <div class="jh">
-          <h2>Freelance</h2>
+          <h3>Freelance</h3>
           <p class="dates">2010 – present</p>
         </div>
         <p class="desc">Technical content for SaaS, tech, and engineering companies</p>
@@ -281,10 +283,10 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
           <li data-tags="content tech"><span class="txt">Wrote technical eBooks, tutorials, whitepapers, case studies, articles, and web and ad copy for clients including Graylog and Devart.</span> <span class="bt"><span data-k="content">Content marketing</span> <span data-k="tech">Technical depth</span></span></li>
         </ul>
       </article>
-      <section class="tk" id="education" aria-labelledby="edu-h"><h2 id="edu-h">Education</h2><p class="t"><strong>Master&#x27;s degree in Electrical &amp; Computer Engineering</strong></p><p class="s">Major: Microcomputer Electronics<br>Faculty of Technical Sciences, Novi Sad</p><p class="s" style="margin-top:12px">Additional master&#x27;s studies in Data Science (coursework completed, no degree conferred)</p></section>
+      <section class="tk" id="education" aria-labelledby="edu-h"><h2 class="shd" id="edu-h">Education</h2><p class="t"><strong>Master&#x27;s degree in Electrical &amp; Computer Engineering</strong></p><p class="s">Major: Microcomputer Electronics<br>Faculty of Technical Sciences, Novi Sad</p><p class="s" style="margin-top:12px">Additional master&#x27;s studies in Data Science (coursework completed, no degree conferred)</p></section>
       <section class="tk" id="certifications" aria-labelledby="cert-h">
-    <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 20px">
-      <h2 id="cert-h" style="margin:0">Certifications</h2>
+    <div class="shd">
+      <h2 id="cert-h">Certifications</h2>
       <div style="display: flex; gap: 8px">
         <button type="button" class="cbtn" data-dir="-1" aria-label="Previous certifications"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5 L8 12 L15 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         <button type="button" class="cbtn" data-dir="1" aria-label="Next certifications"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5 L16 12 L9 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -304,8 +306,8 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
         <li><div class="cert"><a class="nm" href="https://www.coursera.org/account/accomplishments/verify/HE9JGHEZAE8F" target="_blank" rel="noopener">Data Science Methodology</a><span class="iss">Coursera</span></div></li>
     </ul>
       </section>
-      <section class="tk" id="tools" aria-labelledby="tools-h"><h2 id="tools-h">Tools</h2><dl><dt>Analytics &amp; CRM</dt><dd><span>Google Analytics 4</span><span>Google Tag Manager</span><span>HubSpot</span><span>Meta Business Suite</span></dd><dt>SEO &amp; Content</dt><dd><span>Semrush</span><span>Yoast</span><span>WordPress</span><span>Kajabi</span><span>Grammarly</span></dd><dt>Project &amp; Collaboration</dt><dd><span>Jira</span><span>Confluence</span><span>Asana</span><span>Miro</span></dd><dt>Design &amp; Production</dt><dd><span>Figma</span><span>Canva</span></dd><dt>Technical, Data, &amp; AI</dt><dd><span>HTML/CSS</span><span>Python</span><span>Kaggle</span><span>Claude</span></dd><dt>Office &amp; Spreadsheets</dt><dd><span>Microsoft Office</span><span>Excel</span><span>Google Sheets</span></dd><dt>Marketing Ops</dt><dd><span>CRM workflows</span><span>Campaign tracking</span><span>Reporting dashboards</span></dd></dl></section>
-      <section class="tk" id="languages" aria-labelledby="lang-h"><h2 id="lang-h">Languages</h2><dl><dt>English</dt><dd><span>Bilingual</span></dd><dt>German</dt><dd><span>B2</span></dd><dt>French</dt><dd><span>B1</span></dd><dt>Serbian</dt><dd><span>Native</span></dd></dl></section>
+      <section class="tk" id="tools" aria-labelledby="tools-h"><h2 class="shd" id="tools-h">Tools</h2><dl><dt>Analytics &amp; CRM</dt><dd><span>Google Analytics 4</span><span>Google Tag Manager</span><span>HubSpot</span><span>Meta Business Suite</span></dd><dt>SEO &amp; Content</dt><dd><span>Semrush</span><span>Yoast</span><span>WordPress</span><span>Kajabi</span><span>Grammarly</span></dd><dt>Project &amp; Collaboration</dt><dd><span>Jira</span><span>Confluence</span><span>Asana</span><span>Miro</span></dd><dt>Design &amp; Production</dt><dd><span>Figma</span><span>Canva</span></dd><dt>Technical, Data, &amp; AI</dt><dd><span>HTML/CSS</span><span>Python</span><span>Kaggle</span><span>Claude</span></dd><dt>Office &amp; Spreadsheets</dt><dd><span>Microsoft Office</span><span>Excel</span><span>Google Sheets</span></dd><dt>Marketing Ops</dt><dd><span>CRM workflows</span><span>Campaign tracking</span><span>Reporting dashboards</span></dd></dl></section>
+      <section class="tk" id="languages" aria-labelledby="lang-h"><h2 class="shd" id="lang-h">Languages</h2><dl><dt>English</dt><dd><span>Bilingual</span></dd><dt>German</dt><dd><span>B2</span></dd><dt>French</dt><dd><span>B1</span></dd><dt>Serbian</dt><dd><span>Native</span></dd></dl></section>
   </main>
 </div>
 <footer style="border-top: 1px solid #d9d4c7; padding: 30px 24px; font-size: 13px; color: #5f6b77">
