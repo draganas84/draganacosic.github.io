@@ -57,6 +57,23 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
 .edu{padding-top:32px;border-top:1px solid #d9d4c7}
 .tk{padding-top:32px;border-top:1px solid #d9d4c7}.tk h2{margin:0 0 18px;font-family:'Iowan Old Style',Georgia,serif;font-weight:500;font-size:28px;line-height:1.2;color:#1d6b66}.tk dl{margin:0;display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:12px 24px}.tk dt{font-weight:600;font-size:15px;padding-top:3px}.tk dd{margin:0;display:flex;flex-wrap:wrap;gap:6px}.tk dd span{font-size:14px;border:1px solid #d9d4c7;background:#fbf9f4;border-radius:999px;padding:2px 12px}@media(max-width:600px){.tk dl{grid-template-columns:1fr;gap:6px}.tk dd{margin-bottom:10px}}
 .cvnav{display:flex;flex-direction:column;gap:8px;margin:0 0 26px;padding:0 0 14px;border-bottom:1px solid #d9d4c7;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}.cvnav a{color:#5f6b77}.cvnav a:hover{color:#1d6b66}.tk{scroll-margin-top:24px}#experience{scroll-margin-top:24px}.tk p.t{margin:0;font-size:16px}.tk p.s{margin:2px 0 0;color:#5f6b77;font-size:15px}.tk+.tk{margin-top:40px}
+.ctrack{list-style:none;margin:0;padding:20px 4px 24px;display:flex;gap:40px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;position:relative}
+.ctrack::-webkit-scrollbar{display:none}
+.ctrack:focus-visible{outline:2px solid #1d6b66;outline-offset:4px}
+.ctrack li{flex:0 0 200px;scroll-snap-align:start;position:relative}
+.ctrack li+li:before{content:"";position:absolute;right:100%;top:50%;width:40px;border-top:1.5px dashed #1d6b66}
+.cert{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;width:200px;height:200px;box-sizing:border-box;padding:22px;border:4.5px solid #14212e;background:#f6f3ec;color:#14212e;transition:transform .2s,border-color .2s,background .2s}
+.cert .nm{font-family:'Iowan Old Style',Georgia,serif;font-size:19px;line-height:1.25;color:#14212e;text-decoration:none}
+.cert a.nm{transition:color .2s}
+.cert a.nm:before{content:"";position:absolute;inset:0}
+.cert a.nm:after{content:" \2197";font-size:14px;color:#1d6b66}
+.cert a.nm:hover{color:#1d6b66}
+.cert a.nm:focus-visible{outline:2px solid #1d6b66;outline-offset:4px}
+.cert:has(a.nm:hover){border-color:#1d6b66;background:#e9f1ef;transform:translateY(-3px)}
+.cert .iss{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5f6b77}
+.cbtn{width:44px;height:44px;border-radius:50%;border:1px solid #14212e;background:transparent;color:#14212e;cursor:pointer;display:grid;place-items:center}
+.cbtn:hover{background:#14212e;color:#fff}
+.cbtn:disabled{opacity:.3;cursor:default;background:transparent;color:#14212e}
 </style>
 </head>
 <body>
@@ -76,7 +93,7 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
 </nav>
 <div class="xp">
   <aside class="side" aria-label="Filter by skill">
-    <nav class="cvnav" aria-label="CV sections"><a href="#experience">Professional Experience</a><a href="#education">Education</a><a href="#tools">Tools</a><a href="#languages">Languages</a></nav>
+    <nav class="cvnav" aria-label="CV sections"><a href="#experience">Professional Experience</a><a href="#education">Education</a><a href="#certifications">Certifications</a><a href="#tools">Tools</a><a href="#languages">Languages</a></nav>
     <h1>16+ years, filtered by skill.</h1>
     <div class="rule"></div>
     <p class="hint">Pick the skills you're hiring for. Matching experience lights up.</p>
@@ -234,6 +251,28 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
         </ul>
       </article>
       <section class="tk" id="education" aria-labelledby="edu-h"><h2 id="edu-h">Education</h2><p class="t"><strong>Master&#x27;s degree in Electrical &amp; Computer Engineering</strong></p><p class="s">Major: Microcomputer Electronics<br>Faculty of Technical Sciences, Novi Sad</p><p class="s" style="margin-top:12px">Additional master&#x27;s studies in Data Science (coursework completed, no degree conferred)</p></section>
+      <section class="tk" id="certifications" aria-labelledby="cert-h">
+    <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 20px">
+      <h2 id="cert-h" style="margin:0">Certifications</h2>
+      <div style="display: flex; gap: 8px">
+        <button type="button" class="cbtn" data-dir="-1" aria-label="Previous certifications"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5 L8 12 L15 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button type="button" class="cbtn" data-dir="1" aria-label="Next certifications"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5 L16 12 L9 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+    <ul class="ctrack" tabindex="0" aria-label="Certifications, scroll sideways">
+        <!-- To add a link: change <span class="nm"> to <a class="nm" href="URL" target="_blank" rel="noopener"> -->
+        <li><div class="cert"><a class="nm" href="https://verify.skilljar.com/c/uw8c3b457dku" target="_blank" rel="noopener">AI Fluency: Framework &amp; Foundations</a><span class="iss">Anthropic</span></div></li>
+        <li><div class="cert"><a class="nm" href="https://verify.skilljar.com/c/hwvxgnaobhxe" target="_blank" rel="noopener">AI Capabilities and Limitations</a><span class="iss">Anthropic</span></div></li>
+        <li><div class="cert"><a class="nm" href="https://www.coursera.org/account/accomplishments/specialization/certificate/VQ8E3ZZ5UJFA" target="_blank" rel="noopener">Data Science Professional Certificate</a><span class="iss">IBM</span></div></li>
+        <li><div class="cert"><a class="nm" href="https://app.hubspot.com/academy/achievements/dtkmjrmh/en/1/dragana-cosic/content-marketing" target="_blank" rel="noopener">Content Marketing</a><span class="iss">HubSpot Academy</span></div></li>
+        <li><div class="cert"><span class="nm">SEO</span><span class="iss">HubSpot Academy</span></div></li>
+        <li><div class="cert"><span class="nm">Inbound Marketing</span><span class="iss">HubSpot Academy</span></div></li>
+        <li><div class="cert"><span class="nm">Growth-Driven Design</span><span class="iss">HubSpot Academy</span></div></li>
+        <li><div class="cert"><a class="nm" href="https://www.credly.com/badges/99ef19fb-2d4d-46e6-b31b-c45cb350f41a/linked_in_profile" target="_blank" rel="noopener">Python for Data Science</a><span class="iss">IBM</span></div></li>
+        <li><div class="cert"><a class="nm" href="https://verify.skilljar.com/c/pjpy3ar7w2ry" target="_blank" rel="noopener">Claude 101</a><span class="iss">Anthropic</span></div></li>
+        <li><div class="cert"><a class="nm" href="https://www.coursera.org/account/accomplishments/verify/HE9JGHEZAE8F" target="_blank" rel="noopener">Data Science Methodology</a><span class="iss">Coursera</span></div></li>
+    </ul>
+      </section>
       <section class="tk" id="tools" aria-labelledby="tools-h"><h2 id="tools-h">Tools</h2><dl><dt>Analytics &amp; CRM</dt><dd><span>Google Analytics 4</span><span>Google Tag Manager</span><span>HubSpot</span><span>Meta Business Suite</span></dd><dt>SEO &amp; Content</dt><dd><span>Semrush</span><span>Yoast</span><span>WordPress</span><span>Kajabi</span><span>Grammarly</span></dd><dt>Project &amp; Collaboration</dt><dd><span>Jira</span><span>Confluence</span><span>Asana</span><span>Miro</span></dd><dt>Design &amp; Production</dt><dd><span>Figma</span><span>Canva</span></dd><dt>Technical, Data, &amp; AI</dt><dd><span>HTML/CSS</span><span>Python</span><span>Kaggle</span><span>Claude</span></dd><dt>Office &amp; Spreadsheets</dt><dd><span>Microsoft Office</span><span>Excel</span><span>Google Sheets</span></dd><dt>Marketing Ops</dt><dd><span>CRM workflows</span><span>Campaign tracking</span><span>Reporting dashboards</span></dd></dl></section>
       <section class="tk" id="languages" aria-labelledby="lang-h"><h2 id="lang-h">Languages</h2><dl><dt>English</dt><dd><span>Bilingual</span></dd><dt>German</dt><dd><span>B2</span></dd><dt>French</dt><dd><span>B1</span></dd><dt>Serbian</dt><dd><span>Native</span></dd></dl></section>
   </main>
@@ -269,6 +308,12 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
   try{var s=new URL(location.href).searchParams.get('skills'); if(s){s.split(',').forEach(function(k){var b=document.querySelector('.tag[data-tag="'+k+'"]'); if(b)b.setAttribute('aria-pressed','true')})}}catch(e){}
   apply(false);
 })();
+</script>
+<script>
+(function(){var tr=document.querySelector('.ctrack');if(!tr)return;var bs=document.querySelectorAll('.cbtn');
+function upd(){bs[0].disabled=tr.scrollLeft<=2;bs[1].disabled=tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-2}
+bs.forEach(function(b){b.addEventListener('click',function(){tr.scrollBy({left:(+b.dataset.dir)*Math.max(240,tr.clientWidth-240),behavior:'smooth'})})});
+tr.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();})();
 </script>
 </body>
 </html>
