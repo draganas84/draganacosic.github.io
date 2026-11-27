@@ -37,7 +37,7 @@ a{color:#14212e;text-decoration:none}a:hover{color:#1d6b66}
 .clear{background:none;border:0;padding:8px 0;font:inherit;font-size:14px;font-weight:600;color:#1d6b66;cursor:pointer;text-decoration:underline}
 .clear[hidden]{display:none}
 .job{padding:32px 0;border-top:1px solid #d9d4c7}
-.shd+.job{border-top:0;padding-top:0}
+.job:first-child{border-top:0;padding-top:0}
 .jh{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 16px}
 .job h3{color:#1d6b66;margin:0;font-family:'Iowan Old Style',Georgia,serif;font-weight:500;font-size:22px;line-height:1.25}
 .job h3 a{color:#1d6b66;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:5px;text-decoration-thickness:1.5px;transition:text-decoration-color .2s}
@@ -75,7 +75,7 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
 .cbtn:hover{background:#14212e;color:#fff}
 .cbtn:disabled{opacity:.3;cursor:default;background:transparent;color:#14212e}
 .main .shd{box-sizing:border-box;width:100%;border:2px solid #14212e;padding:12px 20px;margin:0 0 28px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Iowan Old Style',Georgia,serif;font-weight:500;font-size:26px;line-height:1.2;color:#14212e;background:#fbf9f4}.main .shd h2{margin:0;font:inherit;color:inherit}
-.more{max-width:1160px;margin:0 auto;padding:0 24px 96px}.more .shd{box-sizing:border-box;width:100%;border:2px solid #14212e;padding:12px 20px;margin:0 0 28px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Iowan Old Style',Georgia,serif;font-weight:500;font-size:26px;line-height:1.2;color:#14212e;background:#fbf9f4}.more .shd h2{margin:0;font:inherit;color:inherit}
+.more{max-width:1160px;margin:0 auto;padding:0 24px 96px}.more .shd{box-sizing:border-box;width:100%;border:2px solid #14212e;padding:12px 20px;margin:0 0 28px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Iowan Old Style',Georgia,serif;font-weight:500;font-size:26px;line-height:1.2;color:#14212e;background:#fbf9f4}.more h2.shd{margin-top:0}.more .shd h2{margin:0;font:inherit;color:inherit}
 </style>
 </head>
 <body>
@@ -124,6 +124,7 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
     </div>
   </div>
 </section>
+<div class="more" id="experience" style="padding-top:48px;padding-bottom:0"><h2 class="shd" id="exp-h" style="margin-bottom:0">Professional Experience</h2></div>
 <div class="xp">
   <aside class="side" aria-label="Filter by skill">
     <nav class="cvnav" aria-label="CV sections"><a href="#experience">Professional Experience</a><a href="#education">Education</a><a href="#certifications">Certifications</a><a href="#tools">Tools</a><a href="#languages">Languages</a></nav>
@@ -155,8 +156,7 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
     <div class="tools"><button type="button" class="clear" hidden>Clear all</button><span id="status" role="status" aria-live="polite"></span></div>
     <p style="margin:24px 0 0"><a href="files/Dragana-Cosic-CV.pdf" download style="display:inline-block;padding:12px 22px;border-radius:4px;font-weight:600;font-size:15px;background:#14212e;color:#fff">Download CV (PDF)</a></p>
   </aside>
-  <main class="main" id="experience">
-      <h2 class="shd" id="exp-h">Professional Experience</h2>
+  <main class="main">
       <article class="job">
         <div class="jh">
           <h3><a href="https://www.epicgames.com" target="_blank" rel="noopener">Epic Games</a> / <a href="https://www.3lateral.com" target="_blank" rel="noopener">3Lateral</a></h3>
