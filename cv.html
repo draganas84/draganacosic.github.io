@@ -347,9 +347,8 @@ body.filtering .job li.hit .bt span.on{background:#1d6b66;color:#fff;border-colo
 </script>
 <script>
 (function(){var tr=document.querySelector('.ctrack');if(!tr)return;var bs=document.querySelectorAll('.cbtn');
-function upd(){bs[0].disabled=tr.scrollLeft<=2;bs[1].disabled=tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-2}
-bs.forEach(function(b){b.addEventListener('click',function(){tr.scrollBy({left:(+b.dataset.dir)*Math.max(240,tr.clientWidth-240),behavior:'smooth'})})});
-tr.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();})();
+bs.forEach(function(b){b.addEventListener('click',function(){var d=+b.dataset.dir,max=tr.scrollWidth-tr.clientWidth,step=Math.max(240,tr.clientWidth-240);
+if(d>0&&tr.scrollLeft>=max-8){tr.scrollTo({left:0,behavior:'smooth'})}else if(d<0&&tr.scrollLeft<=8){tr.scrollTo({left:max,behavior:'smooth'})}else{tr.scrollBy({left:d*step,behavior:'smooth'})}})});})();
 </script>
 </body>
 </html>
